@@ -22,13 +22,11 @@
 
 ### WHAT IS TOKEN BASED AUTHENTICATION ?
 
-- session Based auth: when the user log in, the server creats the sessionand send the id for this user sessionto thebrowser. After that, any request from the user will take with it the session id for that user.
+- **ession Based auth:** when the user log in, the server creats the sessionand send the id for this user sessionto thebrowser. After that, any request from the user will take with it the session id for that user.
 Baesd on the id, the server retrieve the data from the database.
 
-**Stateful Diagram**
-![pic](http://robmclarty.com/system/pictures/sources/64/flow-basic_large.jpg?1450223652)
 
-- Token Based: the server create the token for the user and send it back to the browser and then each request will be attached with the token id and the server will use it to retrieve the data.
+- **Token Based:** the server create the token for the user and send it back to the browser and then each request will be attached with the token id and the server will use it to retrieve the data.
 
 **Stateless Diagram**
 ![pic](http://hamdiceylan.com/wp-content/uploads/2015/12/accessToken.png)
@@ -44,7 +42,7 @@ Baesd on the id, the server retrieve the data from the database.
 4. **Url linkability** Some sites store the ID of what the user is looking at in the sessions. This makes it impossible for users to simply copy and paste the URL or send it to friends.
 
 ### Stateless disadvantages:
-1. **Compromised Secret Key :** The best and the worst thing about JWT is that it relies on just one Key. Consider that the Key is leaked by a careless or a rogue developer/administrator, the whole system is compromised!
+1. **Compromised Secret Key:** The best and the worst thing about JWT is that it relies on just one Key. Consider that the Key is leaked by a careless or a rogue developer/administrator, the whole system is compromised!
 
 2. **Cannot manage client from the server:** We had several cases where we wanted the users at HelpTap to logout by cleaning up the cookies, but we cannot ask them to do so every time.
 As well consider the case that a user’s mobile is stolen, and he wants to logout of all existing sessions(e.g. Gmail’s logout other sessions feature). Well its not possible in case of JWT.
@@ -53,6 +51,6 @@ As well consider the case that a user’s mobile is stolen, and he wants to logo
 
 4. **Crypto-algo can be deprecated:** JWT relies completely on the Signing algorithm. Now, though it is not frequent, but in the past many Encryption/Signing algorithms have been deprecated.
 
-5. **Data Overhead :** The size of the JWT token will be more than that of a normal Session token. The more data you add in the JWT token, the longer it gets linearly.
+5. **Data Overhead:** The size of the JWT token will be more than that of a normal Session token. The more data you add in the JWT token, the longer it gets linearly.
 
 6. **Complicated to understand:** JWT uses cryptographic Signature algorithms to verify the data and get the user-id from the token. Understanding the Signing Algo in itself requires basics of cryptography. So, in case if the developer is not completely educated s/he might introduce security loopholes in the system.
