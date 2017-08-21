@@ -9,7 +9,7 @@
 - On subsequent requests, the session ID is verified against the database and if valid the request processed
 - Once a user logs out of the app, the session is destroyed both client and server side
 
-![pic](https://cdn.scotch.io/scotchy-uploads/2014/11/tokens-traditional.png)
+![pic](http://robmclarty.com/system/pictures/sources/65/flow-cookie-session_large.jpg?1450223782)
 
 #### A few major problems arose with this method of authentication.
 
