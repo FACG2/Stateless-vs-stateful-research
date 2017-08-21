@@ -26,12 +26,12 @@
 Baesd on the id, the server retrieve the data from the database.
 
 **Stateful Diagram**
-![](http://robmclarty.com/system/pictures/sources/64/flow-basic_large.jpg?1450223652)
+![pic](http://robmclarty.com/system/pictures/sources/64/flow-basic_large.jpg?1450223652)
 
 - Token Based: the server create the token for the user and send it back to the browser and then each request will be attached with the token id and the server will use it to retrieve the data.
 
 **Stateless Diagram**
-![](http://hamdiceylan.com/wp-content/uploads/2015/12/accessToken.png)
+![pic](http://hamdiceylan.com/wp-content/uploads/2015/12/accessToken.png)
 
 
 ### Stateless advantages:
